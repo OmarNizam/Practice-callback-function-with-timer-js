@@ -18,8 +18,8 @@ function getTime() {
   return `${hh}:${mm}:${ss}`;
 }
 
-
-// tickClock(); // we need it to fix the delay 1 second
-setInterval(function() {
+function tickClock() {
   clockSection.textContent = getTime();
-}, 1000); // set tickClock every second
+}
+tickClock(); // we need it to fix the delay 1 second
+setInterval(tickClock, 1000); // set tickClock every second

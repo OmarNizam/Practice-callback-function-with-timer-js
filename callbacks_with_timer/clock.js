@@ -21,3 +21,5 @@ function getTime() {
 function tickClock() {
   clockSection.textContent = getTime();
 }
+tickClock(); // we need it to fix the delay 1 second
+setInterval(tickClock, 1000); // set tickClock every second
